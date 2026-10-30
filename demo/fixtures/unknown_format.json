@@ -1,0 +1,48 @@
+{
+  "provider": "fixture-replay",
+  "model": "gpt-4.1 (recorded)",
+  "prompt_version": "extract-v3",
+  "input_tokens": 3210,
+  "output_tokens": 590,
+  "cost_usd": 0.0113,
+  "model_notes": [
+    "No field is labelled 'PO number'. 'Our ref: 2025-0614-CV' is a customer reference; left in po_number as null rather than guessing.",
+    "Unit-of-measure column is free text ('dispenser', 'bottle', 'box') - transcribed verbatim.",
+    "Page 2 contains delivery notes only, no line items."
+  ],
+  "handwritten_pages": [],
+  "order": {
+    "po_number": null,
+    "order_date": "2025-09-16",
+    "customer_name": "CEDAR VALLEY VETERINARY GROUP",
+    "bill_to": {"name": "Cedar Valley Veterinary Group", "street": "PO Box 4407", "city": "Boise", "state": "ID", "zip": "83711"},
+    "ship_to": {"name": "Cedar Valley Veterinary Group", "street": "515 Alder Creek Rd", "city": "Boise", "state": "ID", "zip": "83702"},
+    "line_items": [
+      {"line_no": 1, "customer_item_no": "A1", "description": "Examination gloves, nitrile, medium, 100 per dispenser", "qty": 10, "uom": "dispenser", "unit_price": 9.75, "extended_price": 97.50},
+      {"line_no": 2, "customer_item_no": "A2", "description": "Examination gloves, nitrile, large, 100 per dispenser", "qty": 8, "uom": "dispenser", "unit_price": 9.75, "extended_price": 78.00},
+      {"line_no": 3, "customer_item_no": "B4", "description": "Iodine solution 10%, 16 oz bottle", "qty": 6, "uom": "bottle", "unit_price": 7.40, "extended_price": 44.40},
+      {"line_no": 4, "customer_item_no": "C2", "description": "Suture, absorbable 3-0, 36 per box", "qty": 4, "uom": "box", "unit_price": 52.10, "extended_price": 208.40}
+    ],
+    "subtotal": null,
+    "freight": null,
+    "tax": null,
+    "total": 1105.30,
+    "currency": "USD",
+    "ship_via": "expedited",
+    "carrier_account": "CV-778812",
+    "freight_terms": null,
+    "requested_ship_date": "2025-09-22",
+    "special_instructions": "Deliver to rear loading door; ring bell for receiving. Do not leave cartons on the dock after 3:00 pm."
+  },
+  "evidence": {
+    "order_date": {"page": 1, "quote": "Date recvd: 16 SEP 2025"},
+    "customer_name": {"page": 1, "quote": "CEDAR VALLEY VETERINARY GROUP"},
+    "ship_to.street": {"page": 1, "quote": "515 Alder Creek Rd, Boise, ID 83702"},
+    "ship_to.zip": {"page": 1, "quote": "Postal Code 83702-4407"},
+    "carrier_account": {"page": 1, "quote": "courier account # CV-778812"},
+    "line_items[0].uom": {"page": 1, "quote": "10 dispenser"},
+    "line_items[2].unit_price": {"page": 1, "quote": "7.40"},
+    "total": {"page": 1, "quote": "Goods total"},
+    "special_instructions": {"page": 2, "quote": "Do not leave cartons on the dock after 3:00 pm."}
+  }
+}

@@ -1,0 +1,10 @@
+ship_to_id,customer_id,name,street,city,state,zip
+S1001-01,C1001,Northgate Surgical Supply LLC,1420 Meridian Parkway Suite 300,Columbus,OH,43219
+S1001-02,C1001,Riverside Regional Medical Center,900 Beacon Street,Springfield,IL,62704
+S1002-01,C1002,Lakeview Health Partners,1800 Lakeshore Drive Suite 500,Milwaukee,WI,53202
+S1002-02,C1002,St Aidan Medical Center,77 Prospect Avenue,Milwaukee,WI,53211
+S1002-03,C1002,St Aidan Medical Center Receiving,77 Prospect Ave Dock B,Milwaukee,WI,53211
+S1003-01,C1003,Mercy Ridge Home Health,2201 Fish Hatchery Road,Madison,WI,53713
+S1004-01,C1004,Cedar Valley Veterinary Group,515 Alder Creek Road,Boise,ID,83702
+S1004-02,C1004,Cedar Valley Veterinary Group - Warehouse,515 Alder Creek Rd,Boise,ID,83702
+S1005-01,C1005,Northgate Medical Distributors,88 Commerce Way,Dublin,OH,43017

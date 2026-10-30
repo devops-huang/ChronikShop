@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# demo artefacts
+demo/out/
+demo/samples/_textlayer/
+
+# local env
+.env

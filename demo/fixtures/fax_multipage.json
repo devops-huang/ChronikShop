@@ -1,0 +1,55 @@
+{
+  "provider": "fixture-replay",
+  "model": "gpt-4.1 (recorded)",
+  "prompt_version": "extract-v3",
+  "input_tokens": 8940,
+  "output_tokens": 840,
+  "cost_usd": 0.0246,
+  "model_notes": [
+    "Page 2 arrived rotated 90 degrees; read after rotation.",
+    "Cover sheet and terms page excluded from extraction.",
+    "PO total printed as 4,547.25 which does not reconcile with the listed lines."
+  ],
+  "handwritten_pages": [],
+  "order": {
+    "po_number": "LV-2025-0912-08",
+    "order_date": "2025-09-15",
+    "customer_name": "Lakeview Health Partners",
+    "bill_to": {"name": "Lakeview Health Partners", "street": "1800 Lakeshore Drive, Suite 500", "city": "Milwaukee", "state": "WI", "zip": "53202"},
+    "ship_to": {"name": "St. Aidan Medical Center", "street": "77 Prospect Ave, Receiving Dock B", "city": "Milwaukee", "state": "WI", "zip": "53211"},
+    "line_items": [
+      {"line_no": 1, "customer_item_no": "LV-GZ44", "description": "Gauze sponge 4x4 sterile 12ply", "qty": 24, "uom": "BX", "unit_price": 18.40, "extended_price": 441.60},
+      {"line_no": 2, "customer_item_no": "LV-IV22", "description": "IV admin set 20 drop", "qty": 6, "uom": "CS", "unit_price": 63.40, "extended_price": 380.40},
+      {"line_no": 3, "customer_item_no": "LV-ST12", "description": "Suture tray, basic, disposable", "qty": 150, "uom": "EA", "unit_price": 4.85, "extended_price": 727.50},
+      {"line_no": 4, "customer_item_no": "LV-CTR10", "description": "Cotton tip applicator 6in, 1000/bg", "qty": 312, "uom": "BG", "unit_price": 3.10, "extended_price": 967.20},
+      {"line_no": 5, "customer_item_no": "LV-TP110", "description": "Surgical tape paper 1in x 10yd, 12/bx", "qty": 18, "uom": "BX", "unit_price": 6.20, "extended_price": 111.60}
+    ],
+    "subtotal": null,
+    "freight": null,
+    "tax": null,
+    "total": 4547.25,
+    "currency": "USD",
+    "ship_via": "UPS 3rd Day",
+    "carrier_account": "6W4471",
+    "freight_terms": "third party billing",
+    "requested_ship_date": "2025-09-22",
+    "special_instructions": "Rush — OR schedule Thursday."
+  },
+  "page_roles": {
+    "1": {"role": "cover", "rotation": 0},
+    "2": {"role": "po", "rotation": 90},
+    "3": {"role": "po_continuation", "rotation": 0},
+    "4": {"role": "terms", "rotation": 0}
+  },
+  "evidence": {
+    "po_number": {"page": 2, "quote": "PURCHASE ORDER  LV-2025-0912-08"},
+    "order_date": {"page": 2, "quote": "ORDER DATE: 09/15/2025"},
+    "ship_to.name": {"page": 2, "quote": "SHIP TO: St. Aidan Medical Center"},
+    "ship_to.zip": {"page": 2, "quote": "Milwaukee, WI 53211"},
+    "carrier_account": {"page": 2, "quote": "bill to Lakeview acct 6W4471"},
+    "total": {"page": 3, "quote": "PO TOTAL:"},
+    "line_items[3].customer_item_no": {"page": 3, "quote": "LV-CTR10"},
+    "line_items[3].qty": {"page": 3, "quote": "312"},
+    "line_items[4].unit_price": {"page": 3, "quote": "6.20"}
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "csv_spec": {
+    "version": "1.0-draft",
+    "status": "PLACEHOLDER — to be replaced by the integration partner's specification",
+    "layout": "one header + one line per order line, flat, UTF-8, CRLF, comma, double-quote escaping",
+    "filename_pattern": "PO_{customer_id}_{po_number}_{attempt:02d}.csv",
+    "columns": [
+      {"name": "ORDER_REF", "type": "string", "note": "internal id; also printed in the review sheet"},
+      {"name": "PO_NUMBER", "type": "string", "required": true},
+      {"name": "CUSTOMER_ID", "type": "string", "required": true},
+      {"name": "ORDER_DATE", "type": "date", "format": "%m/%d/%Y"},
+      {"name": "SHIP_TO_ID", "type": "string", "required": true},
+      {"name": "REQUESTED_DATE", "type": "date", "format": "%m/%d/%Y"},
+      {"name": "LINE_NO", "type": "int"},
+      {"name": "ITEM", "type": "string", "required": true, "note": "ERP SKU"},
+      {"name": "CUSTOMER_ITEM", "type": "string", "note": "as printed, for traceability"},
+      {"name": "QTY", "type": "decimal", "format": "0.####"},
+      {"name": "UOM", "type": "string"},
+      {"name": "UNIT_PRICE", "type": "decimal", "format": "0.00"},
+      {"name": "SHIP_VIA", "type": "string"},
+      {"name": "CARRIER_ACCOUNT", "type": "string", "note": "third-party billing account"},
+      {"name": "SPECIAL_INSTRUCTIONS", "type": "string"},
+      {"name": "SOURCE_FILE", "type": "string", "note": "PDF filename for audit"},
+      {"name": "SOURCE_PAGE", "type": "string", "note": "page(s) the line came from"}
+    ]
+  },
+  "price_policy": "extracted",
+  "price_policy_options": {
+    "extracted": "emit the price printed on the PO (default: what the customer believes)",
+    "erp": "emit the ERP contract price"
+  },
+  "routing": {
+    "auto_ready_min_confidence": 0.92,
+    "emit_blocked_orders": false,
+    "blocked_dir": "_blocked"
+  },
+  "review_sheet": {
+    "include_crops": true,
+    "crop_dpi": 150
+  }
+}

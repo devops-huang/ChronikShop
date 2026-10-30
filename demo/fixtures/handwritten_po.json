@@ -1,0 +1,52 @@
+{
+  "provider": "fixture-replay",
+  "model": "gpt-4.1 (recorded)",
+  "prompt_version": "extract-v3",
+  "input_tokens": 2140,
+  "output_tokens": 610,
+  "cost_usd": 0.0092,
+  "model_notes": [
+    "Document is hand-written; several characters are ambiguous.",
+    "Req. date written '9/19' with no year - assumed 2025.",
+    "Line 2 part number appears as '??' and is illegible; description used instead.",
+    "Line 5 has no part number at all - description only."
+  ],
+  "handwritten_pages": [1],
+  "order": {
+    "po_number": "MRHH-0916",
+    "order_date": "2025-09-16",
+    "customer_name": "Mercy Ridge Home Health",
+    "bill_to": {"name": "Mercy Ridge Home Health", "street": null, "city": "Madison", "state": "WI", "zip": null},
+    "ship_to": {"name": "Mercy Ridge Home Health", "street": "2201 Fish Hatchery Rd", "city": "Madison", "state": "WI", "zip": "53713", "contact": "Wanda"},
+    "line_items": [
+      {"line_no": 1, "customer_item_no": "MRZ-118", "description": "wound dressings, the foam ones 4x4", "qty": 4, "uom": "BX", "unit_price": 22.00},
+      {"line_no": 2, "customer_item_no": null, "description": "syringes 10ml luer lock, 100/bx", "qty": 3, "uom": "BX", "unit_price": 14.75},
+      {"line_no": 3, "customer_item_no": "MRZ-207", "description": "gloves med nitrile", "qty": 10, "uom": "BX", "unit_price": 9.75},
+      {"line_no": 4, "customer_item_no": "MRZ-401", "description": "saline 1000ml irrigation", "qty": 2, "uom": "CS", "unit_price": 41.60},
+      {"line_no": 5, "customer_item_no": null, "description": "back brace, lg, the velcro kind", "qty": 1, "uom": "EA", "unit_price": 58.00}
+    ],
+    "subtotal": null,
+    "freight": null,
+    "tax": null,
+    "total": 370.95,
+    "currency": "USD",
+    "ship_via": null,
+    "carrier_account": null,
+    "freight_terms": null,
+    "requested_ship_date": "2025-09-19",
+    "special_instructions": "Call if anything is backordered — Wanda x4412."
+  },
+  "page_roles": {
+    "1": {"role": "po", "rotation": 0}
+  },
+  "evidence": {
+    "po_number": {"page": 1, "quote": "MRHH-0916"},
+    "order_date": {"page": 1, "quote": "Date: 9/16/25"},
+    "ship_to.street": {"page": 1, "quote": "2201 Fish Hatchery Rd, Madison WI 53713"},
+    "ship_to.contact": {"page": 1, "quote": "Wanda — 2nd floor supply closet"},
+    "line_items[0].customer_item_no": {"page": 1, "quote": "MRZ-118"},
+    "line_items[1].description": {"page": 1, "quote": "syringes 10ml luer lock"},
+    "line_items[4].description": {"page": 1, "quote": "back brace, lg, the velcro kind"},
+    "special_instructions": {"page": 1, "quote": "Please call me if anything is backordered"}
+  }
+}

@@ -1,0 +1,14 @@
+# runtime
+pydantic>=2.7
+pymupdf>=1.24
+rapidfuzz>=3.9
+
+# CSV/PDF generation for the synthetic samples (dev only)
+reportlab>=4.1
+pillow>=10.3
+
+# production model client (only needed with --live)
+openai>=1.40
+
+# tests
+pytest>=8.2
