@@ -139,7 +139,7 @@ class Document:
         self,
         page_no: int,
         bbox: list[float],
-        pad_pt: float = 18.0,
+        pad_pt: float = 7.0,
         dpi: int = 150,
         rotation: int = 0,
     ) -> bytes | None:
@@ -157,7 +157,7 @@ class Document:
         if rotation % 360 in (90, 270):
             w, h = h, w
         x0, y0, x1, y1 = bbox
-        rect = pymupdf.Rect(x0 * w - pad_pt, y0 * h - pad_pt * 1.8, x1 * w + pad_pt, y1 * h + pad_pt * 0.6)
+        rect = pymupdf.Rect(x0 * w - pad_pt, y0 * h - pad_pt * 1.1, x1 * w + pad_pt, y1 * h + pad_pt * 0.5)
         if rotation % 360 in (90, 180, 270):
             # inverse of the render mapping (verified against get_pixmap):
             #   90 : (x,y) -> (H-y, x)      270: (x,y) -> (y, W-x)

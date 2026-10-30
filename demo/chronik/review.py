@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 from pathlib import Path
 
 from .pdfutil import Document, png_b64
@@ -40,6 +41,16 @@ def _crop_for(order: OrderAssessment, field: str | None, doc: Document) -> tuple
             if key.startswith(field + "."):
                 ev = val
                 break
+    if ev is None:
+        # try a sibling on the same line: "line_items[1].customer_item_no"
+        # -> "line_items[1].description". The model cited *something* for this
+        # line; showing that crop is far better than showing nothing.
+        m = re.match(r"^(line_items\[\d+\])\.", field)
+        if m:
+            for key, val in order.extraction.evidence.items():
+                if key.startswith(m.group(1) + "."):
+                    ev = val
+                    break
     if ev is None:
         return None, ""
     rotation = 0

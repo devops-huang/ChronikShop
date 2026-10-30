@@ -13,6 +13,7 @@ samples:
 # offline end-to-end run: fixtures -> triage -> match -> validate -> CSV + review pack
 demo:
 	$(PY) -m chronik.cli
+	$(PY) -m chronik.preview
 
 live:
 	$(PY) -m chronik.cli --live

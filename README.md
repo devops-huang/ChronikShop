@@ -39,6 +39,8 @@ handwritten_po.pdf   needs_review   0.85      5  DOC_LOW_QUALITY, HANDWRITTEN, I
 unknown_format.pdf   blocked        0.43      4  EVIDENCE_UNVERIFIED, ITEM_NOT_FOUND, MISSING_PO_NUMBER, ...
 ```
 
+![review card](docs/images/review_card_fax.png)
+
 Outputs:
 
 ```

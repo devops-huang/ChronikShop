@@ -159,6 +159,13 @@ two that matter most: *a customer part number must never match another customer'
 order*, and *a crop must land on the right place on a sideways fax*. The same tests run
 against your samples in M1 — that is how accuracy claims stay honest.
 
+**This is what a rep actually sees** (sideways fax, auto-corrected, every flag pointing
+at the printed line it came from):
+
+![review card — sideways fax](images/review_card_fax.png)
+
+![review card — handwritten order](images/review_card_handwritten.png)
+
 ---
 
 # PART B — 中文对照
@@ -237,4 +244,7 @@ ERP 导入逻辑、查重、下游审批（集成商负责）；放行订单；�
 
 ## B9. 今天就能跑的东西
 
-`demo/` 下 4 份**合成**样本（干净 PDF / 横向 300dpi 传真含封面与条款页 / 手写 / 从未见过的格式）+ 录制的抽取回放，**无需任何 key、无需联网**，`make demo` 一条命令出 CSV、复核页、指标（含每单成本）。20 个自动化测试里有两条最关键：**客户料号不能跨客户匹配**、**横向传真上的截图必须裁对位置**。M1 时同一套测试改用客户的真实样本 —— 这就是"准确率不敢注水"的机制。
+`demo/` 下 4 份**合成**样本（干净 PDF / 横向 300dpi 传真含封面与条款页 / 手写 / 从未见过的格式）+ 录制的抽取回放，**无需任何 key、无需联网**，`make demo` 一条命令出 CSV、复核页、指标（含每单成本）。
+
+上面两张图就是复核员实际看到的画面（由 `python -m chronik.preview` 生成）：横向传真自动纠正，
+每条 flag 都指向原文那一行。20 个自动化测试里有两条最关键：**客户料号不能跨客户匹配**、**横向传真上的截图必须裁对位置**。M1 时同一套测试改用客户的真实样本 —— 这就是"准确率不敢注水"的机制。
