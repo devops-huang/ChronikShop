@@ -1,0 +1,36 @@
+{
+  "messages": [
+    {
+      "file": "clean_po.pdf",
+      "message_id": "AAMkAD-clean-001",
+      "received_at": "2025-09-12T14:22:11Z",
+      "sender_email": "purchasing@northgatesurgical.example",
+      "subject": "PO NG-4471902",
+      "body_text": "Attached is our purchase order for the Springfield facility. Thanks, Dana"
+    },
+    {
+      "file": "fax_multipage.pdf",
+      "message_id": "AAMkAD-fax-002",
+      "received_at": "2025-09-15T09:03:47Z",
+      "sender_email": "faxserver@lakeviewhp.example",
+      "subject": "Fax received: 4 pages",
+      "body_text": "Inbound fax arrived via the M365 fax connector."
+    },
+    {
+      "file": "handwritten_po.pdf",
+      "message_id": "AAMkAD-hand-003",
+      "received_at": "2025-09-16T17:41:02Z",
+      "sender_email": "wlopez@mercyridge.example",
+      "subject": "Order for Thurs",
+      "body_text": "Scanning this over, Wanda from the 2nd floor"
+    },
+    {
+      "file": "unknown_format.pdf",
+      "message_id": "AAMkAD-unk-004",
+      "received_at": "2025-09-16T20:15:33Z",
+      "sender_email": "purchasing@cedarvalleyvet.example",
+      "subject": "requisition 2025-0614-CV",
+      "body_text": "Please see attached requisition. Delivery notes on page 2."
+    }
+  ]
+}

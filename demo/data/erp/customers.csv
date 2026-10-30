@@ -1,0 +1,6 @@
+customer_id,name,aliases,email_domains
+C1001,Northgate Surgical Supply LLC,Northgate Surgical|Northgate, northgatesurgical.example
+C1002,Lakeview Health Partners,Lakeview Health|Lakeview HP, lakeviewhp.example
+C1003,Mercy Ridge Home Health,Mercy Ridge HH|Mercy Ridge, mercyridge.example
+C1004,Cedar Valley Veterinary Group,Cedar Valley Vet|Cedar Valley Veterinary, cedarvalleyvet.example
+C1005,Northgate Medical Distributors,Northgate Med Dist, nmd.example

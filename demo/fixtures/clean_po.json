@@ -1,0 +1,62 @@
+{
+  "provider": "fixture-replay",
+  "model": "gpt-4.1 (recorded)",
+  "prompt_version": "extract-v3",
+  "input_tokens": 5120,
+  "output_tokens": 690,
+  "cost_usd": 0.0158,
+  "model_notes": [],
+  "handwritten_pages": [],
+  "order": {
+    "po_number": "NG-4471902",
+    "order_date": "2025-09-12",
+    "customer_name": "Northgate Surgical Supply, LLC",
+    "bill_to": {
+      "name": "Northgate Surgical Supply, LLC",
+      "street": "PO Box 88231",
+      "city": "Columbus",
+      "state": "OH",
+      "zip": "43219"
+    },
+    "ship_to": {
+      "name": "Riverside Regional Medical Center",
+      "street": "900 Beacon Street, Dock 4",
+      "city": "Springfield",
+      "state": "IL",
+      "zip": "62704",
+      "contact": "Central Supply"
+    },
+    "line_items": [
+      {"line_no": 1, "customer_item_no": "NG-10042", "description": "Sterile gauze sponge, 4x4, 12-ply, 25/bx", "qty": 48, "uom": "BX", "unit_price": 18.40, "extended_price": 883.20, "requested_date": null},
+      {"line_no": 2, "customer_item_no": "NG-10077", "description": "Non-sterile gauze sponge, 4x4, 200/bg", "qty": 12, "uom": "BG", "unit_price": 27.85, "extended_price": 334.20, "requested_date": null},
+      {"line_no": 3, "customer_item_no": "NG-33120", "description": "Nitrile exam gloves, powder-free, medium, 100/bx", "qty": 60, "uom": "BX", "unit_price": 9.75, "extended_price": 585.00, "requested_date": null},
+      {"line_no": 4, "customer_item_no": "NG-33455", "description": "Nitrile exam gloves, powder-free, large, 100/bx", "qty": 40, "uom": "BX", "unit_price": 9.75, "extended_price": 390.00, "requested_date": null},
+      {"line_no": 5, "customer_item_no": "NG-88010", "description": "Surgical tape, paper, 1in x 10yd, 12/bx", "qty": 25, "uom": "BX", "unit_price": 6.20, "extended_price": 155.00, "requested_date": null},
+      {"line_no": 6, "customer_item_no": "NG-90233", "description": "IV administration set, 20 drop, 50/cs", "qty": 8, "uom": "CS", "unit_price": 63.40, "extended_price": 507.20, "requested_date": "2025-09-26"}
+    ],
+    "subtotal": 2854.60,
+    "freight": 38.50,
+    "tax": null,
+    "total": 2893.10,
+    "currency": "USD",
+    "ship_via": "FedEx Ground",
+    "carrier_account": "4218-9930-7",
+    "freight_terms": null,
+    "requested_ship_date": "2025-09-26",
+    "special_instructions": "Deliver 7am-2pm only."
+  },
+  "evidence": {
+    "po_number": {"page": 1, "quote": "NG-4471902"},
+    "order_date": {"page": 1, "quote": "Order Date: 09/12/2025"},
+    "customer_name": {"page": 1, "quote": "NORTHGATE SURGICAL SUPPLY, LLC"},
+    "ship_to.name": {"page": 1, "quote": "Riverside Regional Medical Center"},
+    "ship_to.street": {"page": 1, "quote": "900 Beacon Street, Dock 4"},
+    "ship_to.zip": {"page": 1, "quote": "Springfield, IL 62704"},
+    "carrier_account": {"page": 1, "quote": "bill freight to our account 4218-9930-7"},
+    "line_items[0].customer_item_no": {"page": 1, "quote": "NG-10042"},
+    "line_items[0].qty": {"page": 1, "quote": "48"},
+    "line_items[0].unit_price": {"page": 1, "quote": "18.40"},
+    "line_items[5].unit_price": {"page": 1, "quote": "63.40"},
+    "total": {"page": 1, "quote": "TOTAL:"}
+  }
+}
