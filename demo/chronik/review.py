@@ -13,15 +13,12 @@ import json
 import re
 from pathlib import Path
 
+from .i18n import t
 from .pdfutil import Document, png_b64
 from .schema import OrderAssessment, Severity
 
 _SEV_COLOR = {Severity.BLOCK: "#b42318", Severity.REVIEW: "#b54708", Severity.INFO: "#475467"}
-_ROUTE_LABEL = {
-    "auto_ready": "Ready to import",
-    "needs_review": "Needs review",
-    "blocked": "Blocked — cannot import",
-}
+_ROUTE_KEYS = {"auto_ready": "auto_ready", "needs_review": "needs_review", "blocked": "blocked"}
 
 
 def _crop_for(order: OrderAssessment, field: str | None, doc: Document) -> tuple[str | None, str]:
@@ -59,19 +56,19 @@ def _crop_for(order: OrderAssessment, field: str | None, doc: Document) -> tuple
             rotation = p.rotation_applied
     caption = f"p.{ev.page}"
     if rotation:
-        caption += f" · rotated {rotation}°"
+        caption += f" · {t('crop_rotated', ' ')} {rotation}°"
     png = None
     if doc.page_view(ev.page).has_text_layer:
         png = doc.crop_around_text(ev.page, ev.quote or "", dpi=150)
         if png is not None:
-            caption += " · located by text search"
+            caption += f" · {t('crop_text_search')}"
     if png is None and ev.bbox:
         png = doc.crop_by_bbox(ev.page, ev.bbox, dpi=150, rotation=rotation)
         if png is not None:
-            caption += " · model bbox"
+            caption += f" · {t('crop_bbox')}"
     if png is None:
         png = doc.render_page_png(ev.page, rotation=rotation, dpi=80)
-        caption += " · full page"
+        caption += f" · {t('crop_full_page')}"
     return png_b64(png), caption
 
 
@@ -92,7 +89,7 @@ def _flag_rows(order: OrderAssessment, doc: Document, with_crops: bool) -> str:
         bits.append("</tr>")
         rows.append("".join(bits))
     if not rows:
-        return "<tr><td colspan='7' class='ok'>No flags — every field reconciled against reference data and arithmetic.</td></tr>"
+        return f"<tr><td colspan='7' class='ok'>{html.escape(t('no_flags'))}</td></tr>"
     return "\n".join(rows)
 
 
@@ -160,9 +157,10 @@ def _conf_bar(value: float) -> str:
 def render_html(
     results: list,
     sample_dir: str | Path,
-    title: str = "Purchase-order agent — review pack",
+    title: str | None = None,
     include_crops: bool = True,
 ) -> str:
+    title = title or t("title")
     sample_dir = Path(sample_dir)
     cards = []
     for r in results:
@@ -170,28 +168,29 @@ def render_html(
         doc = Document(sample_dir / o.source_filename)
         try:
             route_color = {"auto_ready": "#067647", "needs_review": "#b54708", "blocked": "#b42318"}[o.route]
+            route_label = t(_ROUTE_KEYS[o.route])
             ext = o.extraction
             e = ext.order
             cards.append(
                 f"""
     <div class="card">
       <h2>{html.escape(e.po_number or 'NO PO NUMBER')}
-          <span class="route" style="color:{route_color};border-color:{route_color}">{_ROUTE_LABEL[o.route]}</span></h2>
+          <span class="route" style="color:{route_color};border-color:{route_color}">{html.escape(route_label)}</span></h2>
       <div class="meta">
         {html.escape(o.source_filename)} · {html.escape(o.customer_name or 'unknown customer')}
-        {('· ship-to ' + html.escape(o.ship_to_id)) if o.ship_to_id else ''}
-        · {len(o.resolved_lines)} lines · confidence {_conf_bar(o.order_confidence)}
-        · model {html.escape(ext.model)} · {ext.input_tokens + ext.output_tokens} tokens · ${ext.cost_usd:.4f}
+        {('· ' + html.escape(t('ship_to', ' ')) + ' ' + html.escape(o.ship_to_id)) if o.ship_to_id else ''}
+        · {len(o.resolved_lines)} {html.escape(t('lines', ' '))} · {html.escape(t('confidence', ' '))} {_conf_bar(o.order_confidence)}
+        · {html.escape(t('model', ' '))} {html.escape(ext.model)} · {ext.input_tokens + ext.output_tokens} tokens · ${ext.cost_usd:.4f}
         · {r.elapsed_s:.2f}s
       </div>
-      <h3>Flags</h3>
+      <h3>{html.escape(t('flags'))}</h3>
       <table>
-        <tr><th>Severity</th><th>Code</th><th>Field</th><th>Why</th><th>Extracted</th><th>Reference</th>{'<th>Source</th>' if include_crops else ''}</tr>
+        <tr><th>{html.escape(t('severity'))}</th><th>{html.escape(t('code'))}</th><th>{html.escape(t('field'))}</th><th>{html.escape(t('why'))}</th><th>{html.escape(t('extracted'))}</th><th>{html.escape(t('reference'))}</th>{'<th>' + html.escape(t('source')) + '</th>' if include_crops else ''}</tr>
         {_flag_rows(o, doc, include_crops)}
       </table>
-      <h3>Resolved lines</h3>
+      <h3>{html.escape(t('resolved_lines'))}</h3>
       <table>
-        <tr><th>#</th><th>Cust item</th><th>ERP item</th><th>Description as printed</th><th>Qty</th><th>UOM</th><th>Printed price</th><th>ERP price</th><th>Match</th></tr>
+        <tr><th>{html.escape(t('line_no'))}</th><th>{html.escape(t('cust_item'))}</th><th>{html.escape(t('erp_item'))}</th><th>{html.escape(t('description'))}</th><th>{html.escape(t('qty'))}</th><th>{html.escape(t('uom'))}</th><th>{html.escape(t('printed_price'))}</th><th>{html.escape(t('erp_price'))}</th><th>{html.escape(t('match'))}</th></tr>
         {_line_rows(o)}
       </table>
     </div>"""
@@ -206,14 +205,14 @@ def render_html(
 <html><head><meta charset="utf-8"><title>{html.escape(title)}</title><style>{CSS}</style></head>
 <body>
   <h1>{html.escape(title)}</h1>
-  <div class="sub">Generated by the Chronik order agent prototype. Synthetic sample documents; no client data.</div>
+  <div class="sub">{html.escape(t('subtitle', ' '))}</div>
   <div class="card">
     <div class="summary">
-      <div><b>{total}</b> documents</div>
-      <div><b>{sum(len(r.assessment.resolved_lines) for r in results)}</b> lines parsed</div>
-      <div><b>{auto}/{total}</b> straight through</div>
-      <div><b>${cost:.4f}</b> model cost</div>
-      <div><b>{sum(r.elapsed_s for r in results)/max(total,1):.2f}s</b> avg per document</div>
+      <div><b>{total}</b> {html.escape(t('documents', ' '))}</div>
+      <div><b>{sum(len(r.assessment.resolved_lines) for r in results)}</b> {html.escape(t('lines_parsed', ' '))}</div>
+      <div><b>{auto}/{total}</b> {html.escape(t('straight_through', ' '))}</div>
+      <div><b>${cost:.4f}</b> {html.escape(t('model_cost', ' '))}</div>
+      <div><b>{sum(r.elapsed_s for r in results)/max(total,1):.2f}s</b> {html.escape(t('avg_per_doc', ' '))}</div>
     </div>
   </div>
   {''.join(cards)}

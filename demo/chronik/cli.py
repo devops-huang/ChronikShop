@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 
+from .i18n import t
 from .matching import ReferenceData
 from .pipeline import Settings, default_extractor, run_batch, write_metrics
 from .review import write_review_pack
@@ -30,7 +31,11 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--live", action="store_true", help="use Azure OpenAI instead of replayed fixtures")
     ap.add_argument("--no-crops", action="store_true", help="do not embed page crops in the review sheet")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--lang", default=None, choices=["both", "en", "zh"],
+                    help="language for CLI/report labels (default: both)")
     args = ap.parse_args(argv)
+    if args.lang:
+        os.environ["CHRONIK_LANG"] = args.lang
 
     settings = Settings.load(args.settings)
     ref = ReferenceData(args.data)
@@ -49,14 +54,14 @@ def main(argv: list[str] | None = None) -> int:
     review_path = write_review_pack(results, args.samples, Path(args.out) / "review", include_crops=not args.no_crops)
 
     if not args.quiet:
-        print(f"{'document':22s} {'route':14s} {'conf':>5s}  {'lines':>5s}  flags")
+        print(f"{t('cli_document', ' / '):22s} {t('cli_route', ' / '):24s} {t('cli_conf', ' / '):>6s}  {t('lines', ' / '):>8s}  {t('cli_flags', ' / ')}")
         for r in results:
             a = r.assessment
             codes = ", ".join(sorted({f.code.value for f in a.flags})) or "—"
-            print(f"{a.source_filename:22s} {a.route:14s} {a.order_confidence:5.2f}  {len(a.resolved_lines):5d}  {codes}")
-        print(f"\nCSV files   : {Path(args.out) / 'csv'}")
-        print(f"Review pack : {review_path}")
-        print(f"Metrics     : {metrics_path}")
+            print(f"{a.source_filename:22s} {t(a.route, ' / '):24s} {a.order_confidence:6.2f}  {len(a.resolved_lines):8d}  {codes}")
+        print(f"\n{t('csv_files', ' / '):26s} {Path(args.out) / 'csv'}")
+        print(f"{t('review_pack', ' / '):26s} {review_path}")
+        print(f"{t('metrics', ' / '):26s} {metrics_path}")
         print("\n" + json.dumps(json.loads(metrics_path.read_text())["routes"], indent=2))
     return 0
 

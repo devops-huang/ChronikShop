@@ -2,7 +2,12 @@
 
 > Paste-ready proposal for Upwork. English first (that is what the client reads),
 > 中文对照在后半部分，方便你核对口径。
-> Diagram to attach: `docs/diagram/architecture.png` · Prototype link: see §9.
+>
+> **上客户时的附件用这几个（全英文）：**
+> `docs/diagram/architecture_en.png`（架构图）+ `docs/images/review_card_*.png`（复核卡，用 `python -m chronik.preview --lang en` 重新生成即全英文）。
+> 内部讨论时用双语版：`docs/diagram/architecture.png`。
+>
+> *Attachments for the client (English only): `architecture_en.png` + the review cards regenerated with `--lang en`. Internal review: the bilingual `architecture.png`.*
 
 ---
 
