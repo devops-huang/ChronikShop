@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="930" viewBox="0 0 1680 930" role="img" aria-label="Purchase-order intake agent architecture">
+<defs>
+<marker id="arrow-475569" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+<marker id="arrow-1d4ed8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker>
+<marker id="arrow-067647" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#067647"/></marker>
+<marker id="arrow-b54708" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b54708"/></marker>
+<marker id="arrow-98a2b3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#98a2b3"/></marker>
+<linearGradient id="hdr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef4ff"/></linearGradient>
+</defs>
+<rect width="1680" height="930" fill="#f6f8fb"/>
+<text x="64" y="62" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="25" font-weight="700" fill="#0f172a" text-anchor="start" letter-spacing="0">Purchase-order intake agent</text>
+<text x="64" y="90" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">Template-free extraction, everything inside the client's own Azure tenant</text>
+<rect x="1464" y="44" width="144" height="26" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="1536.155" y="61" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#b42318" text-anchor="middle" letter-spacing="0">No third-party SaaS</text>
+<rect x="1332" y="44" width="124" height="26" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="1394.2299999999998" y="61" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#b42318" text-anchor="middle" letter-spacing="0">No per-page fees</text>
+<rect x="1187" y="44" width="137" height="26" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="1255.5599999999997" y="61" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#067647" text-anchor="middle" letter-spacing="0">Code owned day one</text>
+<text x="1616" y="92" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#64748b" text-anchor="end" letter-spacing="0">Client Azure subscription · gpt-4.1 vision · ~$0.02–0.05 per order</text>
+<rect x="48" y="128" width="380" height="214" rx="12" ry="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" opacity="1.0"/>
+<text x="72" y="158" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="start" letter-spacing="0.14em">1 · INTAKE</text>
+<rect x="70" y="174" width="336" height="62" rx="9" ry="9" fill="#f2f4f7" stroke="#cbd5e1" stroke-width="1.4" opacity="1.0"/>
+<text x="86" y="198" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Outlook shared mailbox · Front · fax</text>
+<text x="86" y="218" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">new message with PDF attachments</text>
+<line x1="238" y1="236" x2="238" y2="264" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow-475569)"/>
+<rect x="70" y="264" width="336" height="58" rx="9" ry="9" fill="#fffaeb" stroke="#fedf89" stroke-width="1.4" opacity="1.0"/>
+<text x="86" y="286" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Power Automate (thin trigger)</text>
+<text x="86" y="305" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">filters non-PDF · stores · enqueues — no business logic</text>
+<rect x="468" y="128" width="250" height="214" rx="12" ry="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" opacity="1.0"/>
+<text x="492" y="158" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="start" letter-spacing="0.14em">2 · BUFFER</text>
+<rect x="490" y="176" width="206" height="62" rx="9" ry="9" fill="#f2f4f7" stroke="#cbd5e1" stroke-width="1.4" opacity="1.0"/>
+<text x="504" y="200" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Blob: original PDF</text>
+<text x="504" y="220" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">sha256 · never mutated</text>
+<rect x="490" y="252" width="206" height="66" rx="9" ry="9" fill="#f2f4f7" stroke="#cbd5e1" stroke-width="1.4" opacity="1.0"/>
+<text x="504" y="276" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Storage Queue</text>
+<text x="504" y="296" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">retry · dead-letter · idempotent</text>
+<rect x="758" y="128" width="620" height="500" rx="16" fill="#eef4ff" stroke="#c7d7fe" stroke-width="1.6"/>
+<text x="782" y="158" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#1d4ed8" text-anchor="start" letter-spacing="0.12em">3 · WORKER  ·  Azure Container App (our code, your subscription)</text>
+<rect x="780" y="178" width="178" height="84" rx="10" ry="10" fill="#ecfdf3" stroke="#abefc6" stroke-width="1.4" opacity="1.0"/>
+<text x="794" y="204" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start" letter-spacing="0">① Triage</text>
+<text x="794" y="224" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">page roles by rules</text>
+<text x="794" y="239" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">cover / terms / blank</text>
+<text x="794" y="254" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">never reach the model</text>
+<rect x="980" y="178" width="178" height="84" rx="10" ry="10" fill="#ecfdf3" stroke="#abefc6" stroke-width="1.4" opacity="1.0"/>
+<text x="994" y="204" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start" letter-spacing="0">② Render</text>
+<text x="994" y="224" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">PO pages only, 200 dpi</text>
+<text x="994" y="239" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">rotation correction</text>
+<text x="994" y="254" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">text layer when present</text>
+<rect x="1180" y="178" width="178" height="84" rx="10" ry="10" fill="#eef4ff" stroke="#c7d7fe" stroke-width="1.4" opacity="1.0"/>
+<text x="1194" y="204" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start" letter-spacing="0">③ Extract</text>
+<text x="1194" y="224" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">Azure OpenAI gpt-4.1</text>
+<text x="1194" y="239" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">vision + strict JSON schema</text>
+<text x="1194" y="254" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">cites page + quote</text>
+<rect x="780" y="326" width="178" height="84" rx="10" ry="10" fill="#eef4ff" stroke="#c7d7fe" stroke-width="1.4" opacity="1.0"/>
+<text x="794" y="352" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start" letter-spacing="0">④ Match</text>
+<text x="794" y="372" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">customer · ship-to</text>
+<text x="794" y="387" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">part crosswalk · UOM</text>
+<text x="794" y="402" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">price list</text>
+<rect x="980" y="326" width="178" height="84" rx="10" ry="10" fill="#fffaeb" stroke="#fedf89" stroke-width="1.4" opacity="1.0"/>
+<text x="994" y="352" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start" letter-spacing="0">⑤ Validate + route</text>
+<text x="994" y="372" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">arithmetic · evidence</text>
+<text x="994" y="387" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">quality ceiling</text>
+<text x="994" y="402" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">auto / review / block</text>
+<rect x="1180" y="326" width="178" height="84" rx="10" ry="10" fill="#fffaeb" stroke="#fedf89" stroke-width="1.4" opacity="1.0"/>
+<text x="1194" y="352" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start" letter-spacing="0">⑥ Emit</text>
+<text x="1194" y="372" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">one CSV per order</text>
+<text x="1194" y="387" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">atomic write</text>
+<text x="1194" y="402" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">audit JSON + crops</text>
+<line x1="961" y1="220.0" x2="977" y2="220.0" stroke="#1d4ed8" stroke-width="1.6" marker-end="url(#arrow-1d4ed8)"/>
+<line x1="1161" y1="220.0" x2="1177" y2="220.0" stroke="#1d4ed8" stroke-width="1.6" marker-end="url(#arrow-1d4ed8)"/>
+<path d="M1269.0,264 V300 H869.0 V324" fill="none" stroke="#1d4ed8" stroke-width="1.6" marker-end="url(#arrow-1d4ed8)"/>
+<line x1="961" y1="368.0" x2="977" y2="368.0" stroke="#1d4ed8" stroke-width="1.6" marker-end="url(#arrow-1d4ed8)"/>
+<line x1="1161" y1="368.0" x2="1177" y2="368.0" stroke="#1d4ed8" stroke-width="1.6" marker-end="url(#arrow-1d4ed8)"/>
+<rect x="780" y="432" width="576" height="138" rx="10" ry="10" fill="#ffffff" stroke="#c7d7fe" stroke-width="1.4" opacity="1.0"/>
+<text x="796" y="458" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0f172a" text-anchor="start" letter-spacing="0">Confidence is computed, not claimed  —  strongest signal first</text>
+<text x="796" y="482" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">1  arithmetic identity</text>
+<text x="966" y="482" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">qty × price = extended · catches a missing page</text>
+<rect x="1264" y="473" width="76" height="6" rx="3" fill="#e2e8f0"/>
+<rect x="1264" y="473" width="75" height="6" rx="3" fill="#067647"/>
+<text x="796" y="500" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">2  reference data</text>
+<text x="966" y="500" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">crosswalk · contract price · UOM list</text>
+<rect x="1264" y="491" width="76" height="6" rx="3" fill="#e2e8f0"/>
+<rect x="1264" y="491" width="72" height="6" rx="3" fill="#067647"/>
+<text x="796" y="518" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">3  evidence re-check</text>
+<text x="966" y="518" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">quote must exist on the cited page</text>
+<rect x="1264" y="509" width="76" height="6" rx="3" fill="#e2e8f0"/>
+<rect x="1264" y="509" width="65" height="6" rx="3" fill="#067647"/>
+<text x="796" y="536" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">4  page quality ceiling</text>
+<text x="966" y="536" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">scanned ≤ 0.93 · handwritten ≤ 0.85</text>
+<rect x="1264" y="527" width="76" height="6" rx="3" fill="#e2e8f0"/>
+<rect x="1264" y="527" width="46" height="6" rx="3" fill="#b54708"/>
+<text x="796" y="554" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">5  model self-report</text>
+<text x="966" y="554" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">weakest — can only lower the score</text>
+<rect x="1264" y="545" width="76" height="6" rx="3" fill="#e2e8f0"/>
+<rect x="1264" y="545" width="27" height="6" rx="3" fill="#b42318"/>
+<rect x="1418" y="128" width="214" height="214" rx="12" ry="12" fill="#ffffff" stroke="#abefc6" stroke-width="1.4" opacity="1.0"/>
+<text x="1442" y="158" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="start" letter-spacing="0.14em">4 · OUTPUT</text>
+<rect x="1434" y="174" width="182" height="66" rx="9" ry="9" fill="#ecfdf3" stroke="#abefc6" stroke-width="1.4" opacity="1.0"/>
+<text x="1448" y="198" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">ERP drop folder</text>
+<text x="1448" y="217" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">one CSV per order</text>
+<text x="1448" y="232" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">imported by your partner</text>
+<rect x="1434" y="250" width="182" height="68" rx="9" ry="9" fill="#fffaeb" stroke="#fedf89" stroke-width="1.4" opacity="1.0"/>
+<text x="1448" y="274" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Review pack</text>
+<text x="1448" y="293" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">Teams card + crops of</text>
+<text x="1448" y="308" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">the exact printed line</text>
+<rect x="1418" y="362" width="214" height="246" rx="12" ry="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" opacity="1.0"/>
+<text x="1442" y="390" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="start" letter-spacing="0.14em">5 · REVIEW LOOP</text>
+<circle cx="1446" cy="410" r="9" fill="#f2f4f7" stroke="#cbd5e1"/>
+<text x="1446" y="414" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle" letter-spacing="0">1</text>
+<text x="1464" y="408" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Rep fixes a field</text>
+<text x="1464" y="424" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">review sheet or Teams card</text>
+<circle cx="1446" cy="456" r="9" fill="#f2f4f7" stroke="#cbd5e1"/>
+<text x="1446" y="460" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle" letter-spacing="0">2</text>
+<text x="1464" y="454" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Re-emit CSV</text>
+<text x="1464" y="470" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">attempt + 1, old archived</text>
+<circle cx="1446" cy="502" r="9" fill="#f2f4f7" stroke="#cbd5e1"/>
+<text x="1446" y="506" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle" letter-spacing="0">3</text>
+<text x="1464" y="500" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Sample audit</text>
+<text x="1464" y="516" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">spot-check auto-ready orders</text>
+<circle cx="1446" cy="548" r="9" fill="#f2f4f7" stroke="#cbd5e1"/>
+<text x="1446" y="552" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle" letter-spacing="0">4</text>
+<text x="1464" y="546" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">Metrics</text>
+<text x="1464" y="562" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">auto-rate · flags · $/order</text>
+<rect x="48" y="664" width="654" height="132" rx="12" ry="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" opacity="1.0"/>
+<text x="72" y="692" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="start" letter-spacing="0.12em">6 · REFERENCE DATA  (nightly sync, client-owned CSVs)</text>
+<text x="72" y="718" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">• customers + aliases</text>
+<text x="84" y="733" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">email domains, printed-name aliases</text>
+<text x="394" y="718" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">• ship-to addresses</text>
+<text x="406" y="733" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">scoped per customer — never global fuzzy</text>
+<text x="72" y="772" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">• item crosswalk</text>
+<text x="84" y="787" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">customer part · legacy · UPC → ERP SKU</text>
+<text x="394" y="772" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">• price · UOM list</text>
+<text x="406" y="787" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">contract price + canonical units</text>
+<rect x="738" y="664" width="700" height="132" rx="12" ry="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4" opacity="1.0"/>
+<text x="762" y="692" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="start" letter-spacing="0.12em">7 · PLATFORM  (all in your tenant, no long-lived secrets)</text>
+<text x="762" y="718" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">• Managed Identity</text>
+<text x="774" y="733" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">no API keys on disk; Key Vault for the rest</text>
+<text x="1102" y="718" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">• Application Insights</text>
+<text x="1114" y="733" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">per-stage traces, cost per document</text>
+<text x="762" y="772" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">• Blob versioning · audit log</text>
+<text x="774" y="787" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">original PDF hash + prompt version kept</text>
+<text x="1102" y="772" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0f172a" text-anchor="start" letter-spacing="0">• Bicep / azd deploy</text>
+<text x="1114" y="787" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">whole stack reproducible in one command</text>
+<line x1="418" y1="293" x2="466" y2="293" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow-475569)"/>
+<text x="442" y="278" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="middle" letter-spacing="0">attachment</text>
+<path d="M718,285 H736 V238 H756" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow-475569)"/>
+<text x="737" y="276" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">job</text>
+<path d="M1378,208 H1400 V208" fill="none" stroke="#067647" stroke-width="1.8"/>
+<line x1="1378" y1="208" x2="1416" y2="208" stroke="#067647" stroke-width="1.8" marker-end="url(#arrow-067647)"/>
+<line x1="1378" y1="284" x2="1416" y2="284" stroke="#b54708" stroke-width="1.8" marker-end="url(#arrow-b54708)"/>
+<text x="1386" y="194" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#067647" text-anchor="start" letter-spacing="0">CSV</text>
+<text x="1386" y="270" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#b54708" text-anchor="start" letter-spacing="0">flags</text>
+<path d="M1418,328 H1398 V368.0 H1360" fill="none" stroke="#b54708" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow-b54708)"/>
+<path d="M470,664 V646 H820 V412" fill="none" stroke="#98a2b3" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow-98a2b3)"/>
+<text x="482" y="652" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#64748b" text-anchor="start" letter-spacing="0">reference data feeds ④ Match</text>
+<text x="64" y="886" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.6" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">Cover and terms pages are never sent to the model, so a 4-page fax costs two vision calls, not four.</text>
+<text x="64" y="906" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11.6" font-weight="400" fill="#64748b" text-anchor="start" letter-spacing="0">Everything above runs in the client's Azure subscription under the client's identity; the only external dependency is the model endpoint they own.</text>
+</svg>
