@@ -1,14 +1,21 @@
+# Needs Python >= 3.9 (pydantic 2.x and PyMuPDF have no wheels below that).
+# If pip says "Could not find a version that satisfies pydantic>=2.7",
+# your interpreter is too old -> run:  python3 scripts/doctor.py
+#
+# 需要 Python >= 3.9。若 pip 报 "Could not find a version ... pydantic>=2.7"，
+# 说明解释器太旧，先跑：python3 scripts/doctor.py
+
 # runtime
-pydantic>=2.7
-pymupdf>=1.24
-rapidfuzz>=3.9
+pydantic>=2.7,<3
+pymupdf>=1.24,<2
+rapidfuzz>=3.9,<4
 
 # CSV/PDF generation for the synthetic samples (dev only)
-reportlab>=4.1
-pillow>=10.3
+reportlab>=4.1,<5
+pillow>=10.3,<12
 
 # production model client (only needed with --live)
-openai>=1.40
+openai>=1.40,<3
 
 # tests
-pytest>=8.2
+pytest>=8.2,<9

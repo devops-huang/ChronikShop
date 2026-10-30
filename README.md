@@ -22,6 +22,10 @@
 
 ## 快速开始 · Quick start
 
+> **需要 Python 3.9+**（CentOS/RHEL 自带的 `python3` 常见是 3.6，不够用）。
+> 先自检：`python3 scripts/doctor.py`。不想装 Python 就直接 `docker compose run --rm demo`。
+> *Needs Python 3.9+ (CentOS/RHEL stock `python3` is often 3.6). Preflight: `python3 scripts/doctor.py`. Zero-install: `docker compose run --rm demo`.*
+
 ```bash
 git clone https://github.com/devops-huang/ChronikShop.git
 cd ChronikShop/demo

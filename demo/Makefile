@@ -1,7 +1,11 @@
 PY ?= python3
 OUT ?= out
 
-.PHONY: setup samples demo test clean live
+.PHONY: setup doctor samples demo test clean live docker
+
+# run this first if `pip install` complains about pydantic/pymupdf versions
+doctor:
+	$(PY) scripts/doctor.py
 
 setup:
 	$(PY) -m venv .venv && .venv/bin/pip install -q -r requirements.txt
@@ -17,6 +21,10 @@ demo:
 
 live:
 	$(PY) -m chronik.cli --live
+
+# no local Python needed (see ../docker-compose.yml)
+docker:
+	cd .. && docker compose run --rm demo
 
 test:
 	$(PY) -m pytest -q

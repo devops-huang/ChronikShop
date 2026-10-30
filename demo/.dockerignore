@@ -1,0 +1,6 @@
+.venv/
+out/
+samples/_textlayer/
+__pycache__/
+*.pyc
+.pytest_cache/

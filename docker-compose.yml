@@ -1,0 +1,27 @@
+# Run the demo without touching the host's Python at all — the escape hatch for
+# boxes whose python3 is too old (CentOS 7/8, RHEL 8 …).
+#
+#   docker compose run --rm demo            # offline demo, bilingual
+#   docker compose run --rm demo-en         # English-only labels (client copy)
+#
+# Artefacts land in ./demo/out on the host (CSV, review.html, PNG cards, metrics).
+services:
+  demo:
+    build: ./demo
+    image: chronik-demo:latest
+    working_dir: /app
+    command: sh -c "python -m chronik.cli && python -m chronik.preview"
+    volumes:
+      - ./demo/out:/app/out
+    environment:
+      CHRONIK_LANG: both
+
+  demo-en:
+    build: ./demo
+    image: chronik-demo:latest
+    working_dir: /app
+    command: sh -c "python -m chronik.cli --lang en && python -m chronik.preview --lang en"
+    volumes:
+      - ./demo/out:/app/out
+    environment:
+      CHRONIK_LANG: en
