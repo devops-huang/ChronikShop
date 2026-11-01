@@ -32,7 +32,6 @@ cd ChronikShop/demo
 python3 -m venv .venv && source .venv/bin/activate     # Windows: py -m venv .venv; .\.venv\Scripts\Activate.ps1
 pip install -q -r requirements.txt
 python -m chronik.cli          # 或 make demo / or: make demo
-python -m pytest -q            # 20 passed
 ```
 
 无需凭证、无需联网、无客户数据 —— 4 份合成样本（干净 PDF / 横向传真 / 手写 / 陌生格式）+ 录制回放，全流程确定性可复现。
